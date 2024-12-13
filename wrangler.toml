@@ -1,0 +1,13 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "my-next-app"
+main = ".open-next/worker.ts"
+#main = ".open-next/server-functions/default/handler.mjs"
+
+compatibility_date = "2024-09-26"
+compatibility_flags = ["nodejs_compat"]
+
+# Minification helps to keep the open bundle size down and improve start up time.
+minify = true
+
+# Use the new opens + Assets to host the static frontend files
+assets = { directory = ".open-next/assets", binding = "ASSETS" }
